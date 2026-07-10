@@ -1,4 +1,4 @@
-```
+
 class Solution {
     public int getCount(int n) {
         int count = 0;
@@ -14,4 +14,4 @@ class Solution {
         return count;
     }
 }
-```
+
