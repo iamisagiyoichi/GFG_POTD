@@ -13,19 +13,32 @@ class Node
 */
 
 class Solution {
-    int solve(Node root, int mx) {
-        if (root == null) return Integer.MIN_VALUE;
+    public void maxDiffHelper(Node root, int maxEle, int[] ans) {
+        if (root == null)
+            return;
 
-        int ans = mx - root.data;
-        mx = Math.max(mx, root.data);
+        ans[0] = Math.max(ans[0], maxEle - root.data);
 
-        ans = Math.max(ans, solve(root.left, mx));
-        ans = Math.max(ans, solve(root.right, mx));
+        if (root.data > maxEle) {
+            maxEle = root.data;
+        }
 
-        return ans;
+        if (root.left != null)
+            maxDiffHelper(root.left, maxEle, ans);
+
+        if (root.right != null)
+            maxDiffHelper(root.right, maxEle, ans);
     }
 
     int maxDiff(Node root) {
-        return solve(root, root.data);
+        int[] ans = {Integer.MIN_VALUE};
+
+        if (root.left != null)
+            maxDiffHelper(root.left, root.data, ans);
+
+        if (root.right != null)
+            maxDiffHelper(root.right, root.data, ans);
+
+        return ans[0];
     }
 }
