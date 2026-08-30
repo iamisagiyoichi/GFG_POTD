@@ -29,7 +29,6 @@ class Solution {
             else
                 ans.add(l[index] + rank[i] - diff[index - 1] - 1);
         }
-
         return ans;
     }
 }
