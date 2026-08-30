@@ -11,7 +11,6 @@ class Solution {
                 start = mid + 1;
             }
         }
-
         return ans;
     }
 
