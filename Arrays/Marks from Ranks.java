@@ -19,7 +19,6 @@ class Solution {
         int n = l.length;
         int[] diff = new int[n];
         diff[0] = r[0] - l[0] + 1;
-
         for(int i = 1; i < n; i++) {
             diff[i] = diff[i - 1] + r[i] - l[i] + 1;
         }
