@@ -24,7 +24,6 @@ class Solution {
         }
         for(int i = 0; i < rank.length; i++) {
             int index = ceilPos(rank[i], diff);
-
             if(index == 0)
                 ans.add(l[index] + rank[i] - 1);
             else
