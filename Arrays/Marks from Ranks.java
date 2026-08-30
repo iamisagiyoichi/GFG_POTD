@@ -22,7 +22,6 @@ class Solution {
         for(int i = 1; i < n; i++) {
             diff[i] = diff[i - 1] + r[i] - l[i] + 1;
         }
-
         for(int i = 0; i < rank.length; i++) {
             int index = ceilPos(rank[i], diff);
 
