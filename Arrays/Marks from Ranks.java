@@ -2,7 +2,6 @@ class Solution {
     public int ceilPos(int num, int[] arr) {
         int ans = 0;
         int start = 0, end = arr.length - 1;
-
         while(start <= end) {
             int mid = (start + end) / 2;
 
