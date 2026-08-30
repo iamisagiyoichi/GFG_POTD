@@ -17,7 +17,6 @@ class Solution {
     public ArrayList<Integer> getMarks(int[] l, int[] r, int[] rank) {
         ArrayList<Integer> ans = new ArrayList<>();
         int n = l.length;
-
         int[] diff = new int[n];
         diff[0] = r[0] - l[0] + 1;
 
